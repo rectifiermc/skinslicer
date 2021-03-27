@@ -136,6 +136,6 @@ NoobOrigamy.prototype.merge = function() { //most messy one, need to be upadated
     ctx.drawImage(this.leg_1, 2 * this.hand_2.width, this.chest.height);
     ctx.drawImage(this.leg_2, 3 * this.hand_2.width, this.chest.height);
     ctx.font = "30px Arial";
-    ctx.fillText("rectifier.epizy.com", canvas.width - 500, canvas.height - 30);
+    ctx.fillText("rectifier.epizy.com", canvas.width - 500, canvas.height - 10);
     return canvas.toDataURL();
 }

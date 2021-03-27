@@ -44,7 +44,7 @@ function runNoob(skin) {
 }
 
 function runGlue(skin) {
-    var origamy = new GlueOrigamy(skin, 100);
+    var origamy = new GlueOrigamy(skin, 200);
     console.log(skin);
     get(origamy.merge());
     done();

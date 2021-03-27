@@ -122,9 +122,9 @@ GlueOrigamy.prototype.merge = function() {
     ctx.drawImage(this.head, this.chest.width, 0);
     ctx.drawImage(this.hand_1, 0, this.chest.height);
     ctx.drawImage(this.hand_2, this.hand_1.width, this.chest.height);
-    ctx.drawImage(this.leg_1, 2 * this.hand_2.width, this.chest.height);
-    ctx.drawImage(this.leg_2, 3 * this.hand_2.width, this.chest.height);
+    ctx.drawImage(this.leg_1, this.hand_2.width, this.chest.height + this.hand_1.height);
+    ctx.drawImage(this.leg_2, 0, this.chest.height + this.hand_1.height);
     ctx.font = "30px Arial";
-    ctx.fillText("rectifier.epizy.com", canvas.width - 500, canvas.height - 30);
+    ctx.fillText("rectifier.epizy.com", canvas.width - 500, canvas.height - 5);
     return canvas.toDataURL();
 }

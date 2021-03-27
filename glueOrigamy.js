@@ -124,5 +124,7 @@ GlueOrigamy.prototype.merge = function() {
     ctx.drawImage(this.hand_2, this.hand_1.width, this.chest.height);
     ctx.drawImage(this.leg_1, 2 * this.hand_2.width, this.chest.height);
     ctx.drawImage(this.leg_2, 3 * this.hand_2.width, this.chest.height);
+    ctx.font = "30px Arial";
+    ctx.fillText("rectifier.epizy.com", canvas.width - 500, canvas.height - 30);
     return canvas.toDataURL();
 }

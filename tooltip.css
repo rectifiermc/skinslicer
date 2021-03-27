@@ -103,4 +103,9 @@
 #doneS a:hover {
     opacity: 0.8
 }
+#doneS::after {
+   content: "";
+  clear: both;
+  display: table;
+}
 

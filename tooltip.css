@@ -1,0 +1,99 @@
+#pager {
+    width: 22%;
+    min-width: 250px;
+    min-height: 76vh;
+    margin-left: 10%;
+    background: white;
+    margin-top: 10vh;
+    border-radius: 1vw;
+    padding: 2%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1)
+}
+
+@media only screen and (max-width: 480px) {
+    #pager {
+        width: 85%;
+        min-block-size: 0;
+        margin-left: 5.5%;
+        min-height: 78vh;
+    }
+}
+#upl {
+    margin-top: 10px;
+    display: block;
+    width:90%;
+    background: #86377b;
+    padding: 5%;
+    border-radius:5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+#upl:hover {
+    opacity: 0.8
+}
+#chooseS {
+    padding: 1%;
+}
+#chooseS .tooltip {
+    padding: 2%;
+    border-radius: 5%;
+    background: antiquewhite;
+    background-position:cover;
+    margin-bottom: 30px;
+    opacity: 0.8;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+}
+#chooseS .tooltip:nth-last-child(1) {
+    background:aliceblue
+}
+#chooseS h3 {
+    margin-left: 25px;
+    height: 25px;
+}
+#chooseS .tooltip:hover {
+    cursor: pointer;
+    opacity: .4;
+}
+#doneS #down {
+    margin-top: 30px;
+    display: block;
+    float: left;
+    width:40%;
+    background: #86377b;
+    padding: 5%;
+    border-radius:5px 0px 0px 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+#doneS #print {
+    margin-top:30px;
+    display: block;
+    float: left;
+    width:40%;
+    background: #86377b;
+    padding: 5%;
+    border-radius:0px 5px 5px 0px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+#doneS a:hover {
+    opacity: 0.8
+}
+
+#rectifier {
+    position: fixed;
+    right:4%;
+    top:3vw;
+    z-index: 99;
+}
+
+#rectifier img {
+    border-radius: 50%;
+    height: 96px;
+    width: 96px;
+}

@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="tooltip.css">
+
+    <title>SkinPrint</title>
+
+
+    <script src="driver.js"></script>
+    <script src="noobOrigamy.js"></script>
+    <script src="glueOrigamy.js"></script>
+    <script src="library.js"></script>
+
+    <script>
+        window.onload = driver;
+    </script>
+</head>
+
+<body>
+    <div class="bg">
+        <div id="rectifier">
+            <img src="rec.png" />
+        </div>
+        <div class="waveWrapper waveAnimation">
+            <div class="waveWrapperInner bgTop">
+                <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+            </div>
+            <div class="waveWrapperInner bgMiddle">
+                <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+            </div>
+            <div class="waveWrapperInner bgBottom">
+                <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="pager">
+        <article id="uploadS" style="display: block;">
+            <h2>Welcome
+            </h2>
+            <p>Enter a valid minecraft skin.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nibh ligula. Nunc vel varius massa, sit amet finibus risus. Maecenas nec vehicula massa. Phasellus vitae commodo arcu. Praesent placerat augue vitae
+                mi gravida, nec sollicitudin quam imperdiet. Integer ultricies augue vitae nibh dignissim, non interdum erat ullamcorper.
+                <br>
+                <br>
+                <input name="up" type="file" id="imageInput" accept="image/*" hidden>
+                <label for="imageInput" id="upl">Upload</label>
+        </article>
+        <article id="chooseS" style="display: none">
+            <h2> Choose one !</h2>
+            <br>
+            <div class="tooltip" onclick="runNoob(skin)">
+                <h3>Origamy</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nibh ligula. Nunc vel varius massa, sit amet finibus risus. Maecenas nec vehicula massa. Phasellus vitae commodo arcu. Praesent placerat augue vitae
+                </p>
+            </div>
+            <div class="tooltip" onclick="runGlue(skin)">
+                <h3>Glue</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nibh ligula. Nunc vel varius massa, sit amet finibus risus. Maecenas nec vehicula massa. Phasellus vitae commodo arcu. Praesent placerat augue vitae
+                </p>
+            </div>
+        </article>
+        <article id="doneS" style="display: none;">
+            <h3>Done </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nibh ligula. Nunc vel varius massa, sit amet finibus risus. Maecenas nec vehicula massa. Phasellus vitae commodo arcu. Praesent placerat augue vitae,Sed at nibh ligula. Nunc vel varius massa,
+                sit amet finibus risus. Maecenas nec vehicula massa. Phasellus vitae commodo arcu. Praesent placerat augue vitae mi gravida, nec sollicitudin quam imperdiet. Integer ultricies augue vitae nibh dignissim, non interdum erat ullamcorper.
+            </p>
+            <a id="down" href="" download>
+                Download    
+            </a>
+            <a id="print" onclick="PrintImage(output)">
+                Print
+            </a>
+        </article>
+    </section>
+</body>
+
+</html>

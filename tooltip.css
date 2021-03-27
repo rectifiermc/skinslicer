@@ -10,12 +10,31 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1)
 }
 
-@media only screen and (max-width: 480px) {
+#rectifier {
+    position: fixed;
+    right:4%;
+    top:3vw;
+    z-index: 99;
+}
+
+#rectifier img {
+    border-radius: 50%;
+    height: 96px;
+    width: 96px;
+}
+@media only screen and (max-width: 600px) {
     #pager {
         width: 85%;
         min-block-size: 0;
         margin-left: 5.5%;
         min-height: 78vh;
+    }
+    #rectifier {
+        width:16px;
+    }
+    #rectifier img {
+        width: 16px;
+        height: 16px;
     }
 }
 #upl {
@@ -85,15 +104,3 @@
     opacity: 0.8
 }
 
-#rectifier {
-    position: fixed;
-    right:4%;
-    top:3vw;
-    z-index: 99;
-}
-
-#rectifier img {
-    border-radius: 50%;
-    height: 96px;
-    width: 96px;
-}

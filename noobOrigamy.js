@@ -78,7 +78,7 @@ NoobOrigamy.prototype.prepare = function() {
     });
 
 
-    this.head = this.frame(1, 1, 2 / 5 * this.scl, 10, 10, function(ctx, scale, chest, hand, running_x, img) {
+    this.head = this.frame(1, 1, (2 / 3 * this.scl) * (1 - 0.1), 20, 20, function(ctx, scale, chest, hand, running_x, img) {
         ctx.save();
         ctx.rotate(Math.PI / 2);
         ctx.drawImage(img, 8, 0, 8, 8, -scale * hand, -running_x, hand * scale, hand * scale);

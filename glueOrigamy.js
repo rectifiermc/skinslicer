@@ -70,7 +70,7 @@ GlueOrigamy.prototype.prepare = function() {
     });
 
 
-    this.head = this.frame(1, 1, 2 / 5 * this.scl, 10, 10, function(ctx, scale, chest, hand, running_x, img) {
+    this.head = this.frame(1, 1, (2 / 3 * this.scl) * (1 - 0.1), 20, 20, function(ctx, scale, chest, hand, running_x, img) {
         ctx.save();
         ctx.rotate(Math.PI);
         ctx.drawImage(img, 8, 0, 8, 8, -running_x - chest * scale, 0, chest * scale, hand * scale);
@@ -118,12 +118,12 @@ GlueOrigamy.prototype.merge = function() {
     canvas.height = canvas.width * Math.sqrt(2);
     var ctx = canvas.getContext("2d");
     this.prepare();
-    ctx.drawImage(this.chest, 0, 0);
-    ctx.drawImage(this.head, this.chest.width, 0);
-    ctx.drawImage(this.hand_1, 0, this.chest.height);
-    ctx.drawImage(this.hand_2, this.hand_1.width, this.chest.height);
-    ctx.drawImage(this.leg_1, this.hand_2.width, this.chest.height + this.hand_1.height);
-    ctx.drawImage(this.leg_2, 0, this.chest.height + this.hand_1.height);
+    ctx.drawImage(this.head, 0, 0);
+    ctx.drawImage(this.chest, 0, this.head.height);
+    ctx.drawImage(this.leg_1, this.hand_2.width, this.head.height + this.chest.height);
+    ctx.drawImage(this.leg_2, 0, this.head.height + this.chest.height);
+    ctx.drawImage(this.hand_1, this.chest.width, this.head.height);
+    ctx.drawImage(this.hand_2, this.leg_1.width + this.leg_2.width, this.chest.height + this.head.height);
     ctx.font = "30px Arial";
     ctx.fillText("rectifier.epizy.com", canvas.width - 500, canvas.height - 5);
     return canvas.toDataURL();

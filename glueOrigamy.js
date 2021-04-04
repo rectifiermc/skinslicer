@@ -53,20 +53,33 @@ GlueOrigamy.prototype.prepare = function() {
         ctx.save();
         ctx.rotate(Math.PI);
         ctx.drawImage(img, 20, 48, 4, 4, -running_x - chest * scale, 0, chest * scale, hand * scale);
+        //ovr
+        ctx.drawImage(img, 4, 48, 4, 4, -running_x - chest * scale, 0, chest * scale, hand * scale);
+
         ctx.restore();
         ctx.drawImage(img, 24, 48, 4, 4, running_x, scale, chest * scale, hand * scale);
+        //ovr
+        ctx.drawImage(img, 8, 48, 4, 4, running_x, scale, chest * scale, hand * scale);
     }, function(ctx, scale, chest, hand, running_x, img) {
         ctx.drawImage(img, 16, 52, 16, 12, 0, 0, running_x, scale);
+        //ovr
+        ctx.drawImage(img, 0, 52, 16, 12, 0, 0, running_x, scale);
     });
 
     this.hand_2 = this.frame(1 / 3, 1 / 3, this.scl, 10, 10, function(ctx, scale, chest, hand, running_x, img) {
         ctx.save();
         ctx.rotate(Math.PI);
         ctx.drawImage(img, 36, 48, 4, 4, -running_x - chest * scale, 0, chest * scale, hand * scale);
+        //ovr
+        ctx.drawImage(img, 52, 48, 4, 4, -running_x - chest * scale, 0, chest * scale, hand * scale);
         ctx.restore();
         ctx.drawImage(img, 40, 48, 4, 4, running_x, scale, chest * scale, hand * scale);
+        //ovr
+        ctx.drawImage(img, 56, 48, 4, 4, running_x, scale, chest * scale, hand * scale);
     }, function(ctx, scale, chest, hand, running_x, img) {
         ctx.drawImage(img, 32, 52, 16, 12, 0, 0, running_x, scale);
+        //ovr
+        ctx.drawImage(img, 48, 52, 16, 12, 0, 0, running_x, scale);
     });
 
 
@@ -74,10 +87,17 @@ GlueOrigamy.prototype.prepare = function() {
         ctx.save();
         ctx.rotate(Math.PI);
         ctx.drawImage(img, 8, 0, 8, 8, -running_x - chest * scale, 0, chest * scale, hand * scale);
+        //Overlay
+        ctx.drawImage(img, 40, 0, 8, 8, -running_x - chest * scale, 0, chest * scale, hand * scale);
         ctx.restore();
         ctx.drawImage(img, 16, 0, 8, 8, running_x, scale, chest * scale, hand * scale);
+        //Overlay
+        ctx.drawImage(img, 48, 0, 8, 8, running_x, scale, chest * scale, hand * scale);
+
     }, function(ctx, scale, chest, hand, running_x, img) {
         ctx.drawImage(img, 0, 8, 32, 8, 0, 0, running_x, scale);
+        //Overlay
+        ctx.drawImage(img, 32, 8, 32, 8, 0, 0, running_x, scale);
     });
 
 
@@ -85,10 +105,17 @@ GlueOrigamy.prototype.prepare = function() {
         ctx.save();
         ctx.rotate(Math.PI);
         ctx.drawImage(img, 4, 16, 4, 4, -running_x - chest * scale, 0, chest * scale, hand * scale);
+        //ovr
+        ctx.drawImage(img, 4, 32, 4, 4, -running_x - chest * scale, 0, chest * scale, hand * scale);
         ctx.restore();
+        ctx.drawImage(img, 8, 32, 4, 4, running_x, scale, chest * scale, hand * scale);
+        //ovr
         ctx.drawImage(img, 8, 16, 4, 4, running_x, scale, chest * scale, hand * scale);
     }, function(ctx, scale, chest, hand, running_x, img) {
         ctx.drawImage(img, 0, 20, 16, 12, 0, 0, running_x, scale);
+        //ovr
+        ctx.drawImage(img, 0, 36, 16, 12, 0, 0, running_x, scale);
+
     });
 
 
@@ -96,20 +123,32 @@ GlueOrigamy.prototype.prepare = function() {
         ctx.save();
         ctx.rotate(Math.PI);
         ctx.drawImage(img, 44, 16, 4, 4, -running_x - chest * scale, 0, chest * scale, hand * scale);
+        //ovr
+        ctx.drawImage(img, 44, 32, 4, 4, -running_x - chest * scale, 0, chest * scale, hand * scale);
         ctx.restore();
         ctx.drawImage(img, 48, 16, 4, 4, running_x, scale, chest * scale, hand * scale);
+        //ovr
+        ctx.drawImage(img, 48, 32, 4, 4, running_x, scale, chest * scale, hand * scale);
     }, function(ctx, scale, chest, hand, running_x, img) {
         ctx.drawImage(img, 40, 20, 16, 12, 0, 0, running_x, scale);
+        //Overlay
+        ctx.drawImage(img, 40, 36, 16, 12, 0, 0, running_x, scale);
+
     });
 
     this.chest = this.frame(1 / 3, 2 / 3, this.scl, 10, 10, function(ctx, scale, chest, hand, running_x, img) {
         ctx.save();
         ctx.rotate(Math.PI);
         ctx.drawImage(img, 20, 16, 8, 4, -running_x - chest * scale, 0, chest * scale, hand * scale);
+        //Overlay
+        ctx.drawImage(img, 20, 32, 8, 4, -running_x - chest * scale, 0, chest * scale, hand * scale);
         ctx.restore();
         ctx.drawImage(img, 28, 16, 8, 4, running_x, scale, chest * scale, hand * scale);
+        //Overlay
+        ctx.drawImage(img, 28, 32, 8, 4, running_x, scale, chest * scale, hand * scale);
     }, function(ctx, scale, chest, hand, running_x, img) {
         ctx.drawImage(img, 16, 20, 24, 12, 0, 0, running_x, scale);
+        ctx.drawImage(img, 16, 36, 24, 12, 0, 0, running_x, scale);
     });
 };
 GlueOrigamy.prototype.merge = function() {

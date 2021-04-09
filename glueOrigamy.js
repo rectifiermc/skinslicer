@@ -86,13 +86,13 @@ GlueOrigamy.prototype.prepare = function() {
     this.head = this.frame(1, 1, (2 / 3 * this.scl) * (1 - 0.1), 20, 20, function(ctx, scale, chest, hand, running_x, img) {
         ctx.save();
         ctx.rotate(Math.PI);
-        ctx.drawImage(img, 8, 0, 8, 8, -running_x - chest * scale, 0, chest * scale, hand * scale);
+        ctx.drawImage(img, 16, 0, 8, 8, -running_x - chest * scale, -2 * scale, chest * scale, hand * scale);
         //Overlay
-        ctx.drawImage(img, 40, 0, 8, 8, -running_x - chest * scale, 0, chest * scale, hand * scale);
+        ctx.drawImage(img, 48, 0, 8, 8, -running_x - chest * scale, -2 * scale, chest * scale, hand * scale);
         ctx.restore();
-        ctx.drawImage(img, 16, 0, 8, 8, running_x, scale, chest * scale, hand * scale);
+        ctx.drawImage(img, 8, 0, 8, 8, running_x, -scale, chest * scale, hand * scale);
         //Overlay
-        ctx.drawImage(img, 48, 0, 8, 8, running_x, scale, chest * scale, hand * scale);
+        ctx.drawImage(img, 40, 0, 8, 8, running_x, -scale, chest * scale, hand * scale);
 
     }, function(ctx, scale, chest, hand, running_x, img) {
         ctx.drawImage(img, 0, 8, 32, 8, 0, 0, running_x, scale);
